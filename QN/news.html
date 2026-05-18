@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tin tức</title>
+    <link rel="stylesheet" href="news.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container nav">
+        <h1>Cẩm nang du lịch</h1>
+
+        <ul>
+          <li><a href="index.html" class="home-btn">Trang chủ</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- BANNER -->
+    <section class="banner">
+      <div class="overlay"><br /><br /><br /><br /><br /></div>
+    </section>
+
+    <!-- SEARCH -->
+    <section class="search-bar container">
+      <div class="search-box">
+        <input type="text" placeholder="🔍 Tìm bài viết..." />
+        <button>Tìm kiếm</button>
+      </div>
+    </section>
+
+    <!-- NEWS LIST -->
+    <section class="news container">
+      <div class="news-card" onclick="showNews('halong')">
+        <img src="img/halong.jpg" />
+        <div class="content">
+          <h3>Đi Hạ Long mùa nào đẹp?</h3>
+          <p>Thời điểm lý tưởng để du lịch Hạ Long...</p>
+        </div>
+      </div>
+
+      <div class="news-card" onclick="showNews('checkin')">
+        <img src="img/checkin.jpg" />
+        <div class="content">
+          <h3>Top địa điểm check-in</h3>
+          <p>Những nơi sống ảo không thể bỏ qua...</p>
+        </div>
+      </div>
+
+      <div class="news-card" onclick="showNews('food')">
+        <img src="img/angi.jpg" />
+        <div class="content">
+          <h3>Ăn gì ở Quảng Ninh?</h3>
+          <p>Danh sách món ngon nổi tiếng...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="newsModal" class="modal">
+      <div class="modal-content">
+        <span onclick="closeNews()" class="close">&times;</span>
+        <h2 id="newsTitle"></h2>
+        <p id="newsContent"></p>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script>
+      function showNews(type) {
+        let title = "";
+        let content = "";
+
+        if (type === "halong") {
+          title = "Đi Hạ Long mùa nào đẹp?";
+          content =
+            "Tháng 3-5 và 9-11 là thời điểm đẹp nhất để du lịch Hạ Long.";
+        }
+
+        if (type === "checkin") {
+          title = "Top địa điểm check-in";
+          content = "Vịnh Hạ Long, Bãi Cháy, đảo Cô Tô là những điểm hot.";
+        }
+
+        if (type === "food") {
+          title = "Ăn gì ở Quảng Ninh?";
+          content = "Chả mực, sá sùng, hải sản tươi sống là đặc sản nổi bật.";
+        }
+
+        document.getElementById("newsTitle").innerText = title;
+        document.getElementById("newsContent").innerText = content;
+        document.getElementById("newsModal").style.display = "block";
+      }
+
+      function closeNews() {
+        document.getElementById("newsModal").style.display = "none";
+      }
+    </script>
+<footer>
+    <p>Du lịch Quảng Ninh</p>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Khách sạn Quảng Ninh</title>
+    <link rel="stylesheet" href="hotel.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container nav">
+        <h1>Khách sạn Quảng Ninh</h1>
+
+        <ul>
+          <li><a href="index.html" class="home-btn">Trang chủ</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero"><br /><br /><br /><br /><br /></section>
+
+    <section class="search-bar container">
+      <div class="search-box">
+        <input type="text" placeholder="Tìm khách sạn, địa điểm..." />
+        <button>Tìm kiếm</button>
+      </div>
+    </section>
+
+    <!-- HOTEL LIST -->
+    <section class="hotel-list container">
+      <div class="card" onclick="showHotel('vinpearl')">
+        <img src="img/resort.jpg" />
+        <div class="content">
+          <h3>Vinpearl Hạ Long</h3>
+          <p>⭐ 5 sao</p>
+          <span>2.500.000đ / đêm</span>
+          <button>Đặt ngay</button>
+        </div>
+      </div>
+
+      <div class="card" onclick="showHotel('flc')">
+        <img src="img/flchalong.jpg" />
+        <div class="content">
+          <h3>FLC Hạ Long</h3>
+          <p>⭐ 4 sao</p>
+          <span>1.800.000đ / đêm</span>
+          <button>Đặt ngay</button>
+        </div>
+      </div>
+
+      <div class="card" onclick="showHotel('coto')">
+        <img src="img/hotelcoto.jpg" />
+        <div class="content">
+          <h3>Hotel Cô Tô</h3>
+          <p>⭐ 3 sao</p>
+          <span>900.000đ / đêm</span>
+          <button>Đặt ngay</button>
+        </div>
+      </div>
+
+      <div class="card" onclick="showHotel('muongthanh')">
+        <img
+          src="img/ksmuongthanh.jpg"
+        />
+        <div class="content">
+          <h3>Mường Thanh Hạ Long</h3>
+          <p>⭐ 4 sao</p>
+          <span>1.200.000đ / đêm</span>
+          <button>Đặt ngay</button>
+        </div>
+      </div>
+
+      <div class="card" onclick="showHotel('royal_lotus')">
+        <img src="img/deluxe.jpg" />
+        <div class="content">
+          <h3>Royal Lotus Hotel</h3>
+          <p>⭐ 4 sao</p>
+          <span>1.500.000đ / đêm</span>
+          <button>Đặt ngay</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL (đặt ngoài section để không lỗi layout) -->
+    <div id="hotelModal" class="modal">
+      <div class="modal-content">
+        <span onclick="closeModal()" class="close">&times;</span>
+        <h2 id="hotelName"></h2>
+        <p id="hotelDesc"></p>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+      function showHotel(type) {
+        let name = "";
+        let desc = "";
+
+        if (type === "vinpearl") {
+          name = "Vinpearl Hạ Long";
+          desc = "Khách sạn 5 sao, view biển cực đẹp, có hồ bơi vô cực.";
+        }
+
+        if (type === "flc") {
+          name = "FLC Hạ Long";
+          desc = "Resort cao cấp với sân golf và dịch vụ nghỉ dưỡng.";
+        }
+
+        if (type === "coto") {
+          name = "Hotel Cô Tô";
+          desc = "Giá rẻ, gần biển, phù hợp sinh viên.";
+        }
+
+        if (type === "muongthanh") {
+          name = "Mường Thanh Hạ Long";
+          desc = "Khách sạn 4 sao, vị trí trung tâm, tiện di chuyển.";
+        }
+
+        if (type === "royal_lotus") {
+          name = "Royal Lotus Hotel";
+          desc = "Khách sạn hiện đại, dịch vụ tốt, gần bãi biển.";
+        }
+
+        document.getElementById("hotelName").innerText = name;
+        document.getElementById("hotelDesc").innerText = desc;
+        document.getElementById("hotelModal").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("hotelModal").style.display = "none";
+      }
+    </script>
+<footer>
+    <p>Du lịch Quảng Ninh</p>
+</footer>
+
+  </body>
+</html>
