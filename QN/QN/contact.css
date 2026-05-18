@@ -1,0 +1,130 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f9fafb;
+}
+
+/* NAV */
+.header {
+  background: #1684c0;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+}
+
+.nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* BANNER */
+.banner {
+  background: url("img/QNtlai.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* CONTACT */
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.contact {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* FORM */
+.form-box {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-box input,
+.form-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.form-box textarea {
+  height: 120px;
+}
+
+.form-box button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background: #1684c0;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.form-box button:hover {
+  background: #0e6fa3;
+}
+
+/* INFO */
+.info-box {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* MESSAGE */
+#msg {
+  margin-top: 10px;
+  color: green;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+  }
+}
+
+/* STYLE RIÊNG CHO NÚT TRANG CHỦ */
+.home-btn {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* Hover giống logo nổi bật */
+.home-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #0077b6;
+  color: white;
+  margin-top: 30px;
+}
+header {
+  position: relative;
+}
